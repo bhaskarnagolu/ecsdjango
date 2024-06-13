@@ -75,11 +75,22 @@ WSGI_APPLICATION = 'devsearch.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
-
+'''
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ecsdjango',
+        'USER': 'admin',
+        'PASSWORD': 'Bhas343434',
+        'HOST': 'database-1.clmse8io61bo.us-east-1.rds.amazonaws.com',  # Set to 'localhost' if running locally
+        'PORT': '3306',  # Default is '3306'
     }
 }
 
